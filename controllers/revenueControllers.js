@@ -48,7 +48,7 @@ export const updateRevenue = (req , res) => {
 export const deleteRevenue = (req , res) => {
 
 
-    Revenue.remove({_id : req.params.revenueId}, (error , revenue) => {
+    Revenue.deleteOne({_id : req.params.revenueId}, (error , revenue) => {
         if(error){
             res.send(error)
         }
